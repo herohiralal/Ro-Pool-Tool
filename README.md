@@ -43,7 +43,7 @@ TL;DR - You need object pools, here's my system for it.
 >The pooled objects will be called back after a set time (in seconds).
 
 >**Auto Pool Cleanup**:
->Destroys inactive pool objects after a certain amount of time (in seconds) of being inactive.
+>Destroys inactive pool objects after a certain amount of time (in seconds) of being inactive. You can also define a threshold for the pool that you want it to maintain. The timer gets reset every time this threshold is hit.
 
 >**Name Override**:
 >Changes the name of pooled objects for better identification.
