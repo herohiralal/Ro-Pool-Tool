@@ -26,7 +26,16 @@ TL;DR - You need object pools, here's my system for it.
 
 **3. Designer-friendly UI.** - As a designer myself (and not just a programmer), I feel more comfortable with the Unity editor, rather than within Visual Studio. So I tailored the experience to match that. You can perform almost all tasks of this pooling system from the editor itself.
 
-**4. 10 pre-made extensions.** - And I'll very likely update with more soon. To be more precise I'll write more as I need them. Here's the (currently) exhaustive list:
+**4. Easy-to-use Code structure.** - The whole point of using existing systems such as this one is so that you can cut down on your own effort. Get objects from the pool, set their position & rotation, and return them in a single line, as simple as:
+```C#
+poolTool.Get()
+	.AtPosition(transform.position)
+	.AtRotation(transform.rotation)
+	.WithAutoReturnToPoolAfter(poolTool, 2);
+// 2 stands for 2 seconds.
+```
+
+**5. 10 pre-made extensions.** - And I'll very likely update with more soon. To be more precise I'll write more as I need them. Here's the (currently) exhaustive list:
 
 ![IMAGEPLACEHOLDER - extensions](/images~/2.png)
 
