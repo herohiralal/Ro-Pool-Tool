@@ -21,43 +21,46 @@ TL;DR - You need object pools, here's my system for it.
 # Main Features:
 
 **1. Modular design.** - Attach only the extensions you need. No more inspector hogging.
+
 **2. Open source.** - The next section explains the already simplistic design and how you can extend it to create your own functionalities.
+
 **3. Designer-friendly UI.** - As a designer myself (and not just a programmer), I feel more comfortable with the Unity editor, rather than within Visual Studio. So I tailored the experience to match that. You can perform almost all tasks of this pooling system from the editor itself.
+
 **4. 10 pre-made extensions.** - And I'll very likely update with more soon. To be more precise I'll write more as I need them. Here's the (currently) exhaustive list:
 
 ![IMAGEPLACEHOLDER - extensions](/images~/2.png)
 
->**Logger**
+>**Logger**:
 >Currently only displays the data in the inspector.I plan on extending this functionality to include making graphs and writing actual logs to a json.
 
->**Initial Populator**
+>**Initial Populator**:
 >Makes the pool instantiate a set number of items at Start( ) and then destroys itself after 2 seconds.
 
->**Static Access For The Pool**
+>**Static Access For The Pool**:
 >Provides a method to get the pool using strings.
 
->**Auto-Return Timer**
+>**Auto-Return Timer**:
 >The pooled objects will be called back after a set time (in seconds).
 
->**Auto Pool Cleanup**
+>**Auto Pool Cleanup**:
 >Destroys inactive pool objects after a certain amount of time (in seconds) of being inactive.
 
->**Name Override**
+>**Name Override**:
 >Changes the name of pooled objects for better identification.
 
->**Unity Event 1 - On Instantiation**
+>**Unity Event 1 - On Instantiation**:
 >Unity event upon new object instantiation. Dynamic callback support for the newly instantiated GameObject.
 
->**Unity Event 2 - On Call**
+>**Unity Event 2 - On Call**:
 >Unity event upon a Get() call from the pool. Dynamic callback support for the GameObject that will be delivered to the client.
 
->**Unity Event 3 - On Return**
+>**Unity Event 3 - On Return**:
 >Unity event upon a Return(GameObject) call. Dynamic callback support for the GameObject returning to the pool.
 
 >**Unity Event 4 - On Destroy**
 >Unity event before the destruction of the object. Dynamic callback support for the GameObject about to be destroyed.
 
->**Pool Cap (deprecated)**
+>**Pool Cap (deprecated)**:
 >Creates a maximum cap for the pool. After that, will return null game objects.
 >Deprecated because you might as well just use the auto-destroy inactive objects extension, with which you can have your optimization, and still render all your particle effects.
 
