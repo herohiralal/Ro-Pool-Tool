@@ -66,9 +66,7 @@ namespace Hiralal.AdvancedPatterns.Pooling
                 return "Set up a Unity event for when this pool destroys an object.";
 
             if (input == typeof(PE04_AutoReturnPoolObjectExtension))
-                return "Auto return a GameObject maintained by this pool after a predefined timer.\n\n" +
-                    "NOTE: Modifying this value at runtime will cause inconsistent timers between " +
-                    "different pooled objects.";
+                return "Auto return a GameObject maintained by this pool after a predefined timer.";
 
             if (input == typeof(PE06_PooledObjectNameOverride))
                 return "Override \"(Clone)\" in the name of a pooled object with a more informative " +

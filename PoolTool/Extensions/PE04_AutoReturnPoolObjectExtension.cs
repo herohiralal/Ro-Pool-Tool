@@ -8,6 +8,8 @@ namespace Hiralal.AdvancedPatterns.Pooling
     {
         [SerializeField] private float returnAfterTime = 10;
 
+        private Dictionary<GameObject, PooledObjectAutoReturn> dictionary = new Dictionary<GameObject, PooledObjectAutoReturn>();
+
         // subscribe
         private void OnEnable()
         {
@@ -29,13 +31,15 @@ namespace Hiralal.AdvancedPatterns.Pooling
 
             var component = _object.AddComponent<PooledObjectAutoReturn>();
             _ = component.WithLifeTime(returnAfterTime).WithAutoDetachOnReturn(false).SetOwner(pool);
+
+            dictionary[_object] = component;
         }
 
         private void ResetTimer(GameObject _object)
         {
             if (_object == null) return;
 
-            var component = _object.GetComponent<PooledObjectAutoReturn>();
+            var component = dictionary[_object];
             if (component != null)
                 _ = component.WithLifeTime(returnAfterTime);
         }
