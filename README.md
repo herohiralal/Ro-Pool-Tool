@@ -125,7 +125,7 @@ private IPoolTool poolTool = PE02_StaticPoolAccess
 >>**3. Singleton pattern:**
 >>Extend the class PoolToolSingleton and pass the new class as  the generic parameter.
 ```C#
-public class AsteroidPool : GenericPool<AsteroidPool> { }
+public class AsteroidPool : PoolToolSingleton<AsteroidPool> { }
 // And then use this singleton generic in your own class.
 ```
 ```C#

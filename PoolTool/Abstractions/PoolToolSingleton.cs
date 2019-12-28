@@ -15,6 +15,6 @@
 	/*
 	Example Template:
 	 
-	public class AsteroidPool : GenericPool<AsteroidPool> { }
+	public class AsteroidPool : PoolToolSingleton<AsteroidPool> { }
 	 */
 }
