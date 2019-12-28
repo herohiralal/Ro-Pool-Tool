@@ -82,7 +82,7 @@ And based on these functions, IPoolTool defines 4 events, that PoolTool MonoBeha
 
 The abstract class PoolExtension grabs a reference to a PoolTool (using GetComponent\<IPoolTool\>(), so make sure any inherited classes are on the same Object) at Awake() (don't override it completely).
 
-You can access the core functionality of the pool in this manner, and bind functions to any/all of those 4 events.
+You can access the core functionality of the pool in this manner (by extending PoolExtension abstract class), and bind functions to any/all of those 4 events. You do not need to "register" it anywhere, the editor will detect this by itself. You can however describe your class in "/Helpers/Editor/PoolToolExtensionEditorData.cs" if you want that sweet helpbox.
 
 # How to use?
 
@@ -96,7 +96,7 @@ You can access the core functionality of the pool in this manner, and bind funct
 
 >There are 3 ways to do this.
 
->>**1. Basic**
+>>**1. Basic:**
 >>Set up an inspector field / use FindGameObject.
 ```C#
 [SerializeField] private PoolTool duic_PoolTool = null;
