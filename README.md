@@ -1,3 +1,4 @@
+# **OBSOLETE - CHECK OUT [HIRATOOLS](http://www.github.com/herohiralal/hiratools) INSTEAD. IT INCLUDES A BETTER VERSION OF THIS.**
 
 # PoolTool
 
